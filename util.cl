@@ -8,7 +8,7 @@
 
 
 (defun aiota (size &optional (start 1))
-  (make-array (list size) :initial-contents (iota size start)))
+  (make-array (list size) :initial-contents (iota size start) :fill-pointer size))
 
 (defun aswap! (ar x1 x2)
   (let ((tmp (aref ar x2)))
@@ -24,3 +24,4 @@
 		       (x2 (random len)))
 		   (aswap! rank-one-array x1 x2)))
 	rank-one-array)))
+
